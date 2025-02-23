@@ -58,7 +58,7 @@ int main() {
         printf("Aqui estão as duas cartas cadastradas: \n");
         
         printf("Carta 01: \n");
-        printf("Área da cidade: %.2f km² \n", areac1);
+        printf("Área da cidade: %.2f km² \n", areac1);  //%.2f determina o n° de casa decimais.
         printf("PIB da cidade: %.2f bilhões de reais \n", PIBc1);
         printf("N° de pontos turísticos: %d \n", ponturc1);
 
