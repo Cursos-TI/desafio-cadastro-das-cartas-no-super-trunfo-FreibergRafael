@@ -10,16 +10,15 @@ int main() {
     // Sugestão: Defina variáveis separadas para cada atributo da cidade.
     // Exemplos de atributos: código da cidade, nome, população, área, PIB, número de pontos turísticos.
     
-    int popc1, popc2;
-    float areac1, areac2;
-    float PIBc1, PIBc2;
-    int ponturc1, ponturc2;
+    int popc1, popc2, ponturc1, ponturc2;
+    float areac1, areac2, PIBc1, PIBc2, PIBpcaptac1, PIBpcaptac2, denspopc1, denspopc2;
 
     // Cadastro das Cartas:
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
     // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
         
-    printf("SuperTrunfo em C!!! Cadastro das duas primeiras cartas: \n");
+    printf("*** SuperTrunfo em C!!! *** \n");
+    printf("Cadastro das duas primeiras cartas: \n");
         
     printf("Carta número 01 \n");
 
@@ -49,6 +48,11 @@ int main() {
         printf("Digite o número de Pontos Turísticos da cidade: \n");
         scanf(" %d", &ponturc2);
         
+            denspopc1 = (float) (popc1 / areac1);
+            denspopc2 = (float) (popc2 / areac2);
+
+            PIBpcaptac1 = (float) (PIBc1*(1000000000) / popc1);
+            PIBpcaptac2 = (float) (PIBc2*(1000000000) / popc2);
 
 
     // Exibição dos Dados das Cartas:
@@ -61,11 +65,15 @@ int main() {
         printf("Área da cidade: %.2f km² \n", areac1);  //%.2f determina o n° de casa decimais.
         printf("PIB da cidade: %.2f bilhões de reais \n", PIBc1);
         printf("N° de pontos turísticos: %d \n", ponturc1);
+        printf("Densidade Populacional: %.2f hab/km² \n", denspopc1);
+        printf("PIB per Capta: %.2f reais \n", PIBpcaptac1);
 
         printf("Carta 02: \n");
         printf("Área da cidade: %.2f km² \n", areac2);
         printf("PIB da cidade: %.2f bilhões de reais \n", PIBc2);
         printf("N° de pontos turísticos: %d \n", ponturc2);
+        printf("Densidade Populacional: %.2f hab/km² \n", denspopc2);
+        printf("PIB per Capta: %.2f reais \n", PIBpcaptac2);
 
 
 
